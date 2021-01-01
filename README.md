@@ -1,21 +1,10 @@
-# døllar dashboard
-simple dashboard for interacting with the døllar protocol.
-
-forked from [Opyn Monitor](https://opynmonitor.xyz).
-
-## ipfs
-for convenience, the current IPFS build of døllar dashboard can be accessed here: [https://emptyset.finance](https://emptyset.finance)
-
-## screenshot
-![image](https://user-images.githubusercontent.com/62496341/90950891-b2469f00-e40a-11ea-90ae-680683462d9f.png)
+# Foreign Set Finance
 
 ## prerequisites
 - install [Node.js](https://nodejs.org/en/download/).
 
 ## install & run locally
 ```shell
-git clone git@github.com:emptysetsquad/dollar-dashboard.git
-cd dollar-dashboard
 npm install
 
 npm start
@@ -31,10 +20,10 @@ npm start
 - `0xdF0Ae5504A48ab9f913F8490fBef1b9333A68e68` **LP Incentivation Pool**
 
 ## disclaimer
-this project is an experiment, and its contracts are unaudited - we've put a significant amount of work into testing, as well as generally de-risking the design of its core mechanism, however participants should take great caution as bugs resulting in loss of funds are always a possibility.
-
+This is a clone of Foreign Set Finance and it is an attempt to produce algorithmic stable coins which are not pegged to the dollar but are instead pegged to other currencies.
 ```
-Copyright 2020 Empty Set Squad <emptysetsquad@protonmail.com>
+
+Copyright 2021 Foreign Set Finance <team@fs.finance>
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use the included code except in compliance with the License.
