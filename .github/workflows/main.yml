@@ -1,36 +1,35 @@
-name: Deploy GitHub Page
+name: Deploy Build
 
 on:
+  pull_request:
   push:
-    branches:
-      - production
+    branches: [ master ]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [12.x]
+
     steps:
-
-    - name: Checkout
-      uses: actions/checkout@v1
-
-    - name: Restore Cache
-      uses: actions/cache@v1
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
       with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
-
-    - name: Build
+        node-version: ${{ matrix.node-version }}
+    - name: NPM Install
       run: |
         npm install
-        npm run-script build
-
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+    - name: Build
+      run: |
+        npm run build
+    - name: Pin to IPFS
+      id: upload
+      uses: anantaramdas/ipfs-pinata-deploy-action@39bbda1ce1fe24c69c6f57861b8038278d53688d
       with:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: build
+        pin-name: App Site
+        path: './build'
+        pinata-api-key: ${{ secrets.PINATA_API_KEY }}
+        pinata-secret-api-key: ${{ secrets.PINATA_API_SECRET_KEY }}
