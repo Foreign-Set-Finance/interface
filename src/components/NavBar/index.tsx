@@ -24,7 +24,7 @@ function NavBar({
     })
   }, [hasWeb3, user, history]);
 
-  const logoUrl = `./logo/logo_${currentTheme._name === 'light' ? 'black' : 'white'}.svg`
+  // const logoUrl = `./logo/logo_${currentTheme._name === 'light' ? 'black' : 'white'}.svg`
 
   return (
     <>
