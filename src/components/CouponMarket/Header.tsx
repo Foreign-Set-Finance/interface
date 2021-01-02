@@ -3,6 +3,7 @@ import React from 'react';
 import BigNumber from "bignumber.js";
 import { BalanceBlock } from "../common";
 import {ownership} from "../../utils/number";
+import { CURRENCY } from '../../configs'
 
 type CouponMarketHeaderProps = {
   debt: BigNumber,
@@ -20,7 +21,7 @@ const CouponMarketHeader = ({
       <BalanceBlock asset="Debt Ratio" balance={ownership(debt, supply)} suffix={"%"}/>
     </div>
     <div style={{ flexBasis: '20%' }}>
-      <BalanceBlock asset="Total Debt" balance={debt} suffix={"ESD"}/>
+      <BalanceBlock asset="Total Debt" balance={debt} suffix={CURRENCY}/>
     </div>
     <div style={{ flexBasis: '20%' }}>
       <BalanceBlock asset="Coupons" balance={coupons} />

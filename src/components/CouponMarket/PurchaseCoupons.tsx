@@ -13,6 +13,7 @@ import {ESD, ESDS} from "../../constants/tokens";
 import {MAX_UINT256} from "../../constants/values";
 import {getCouponPremium} from "../../utils/infura";
 import BigNumberInput from "../common/BigNumberInput";
+import { CURRENCY } from '../../configs'
 
 type PurchaseCouponsProps = {
   user: string,
@@ -44,7 +45,7 @@ function PurchaseCoupons({
         <div style={{display: 'flex', flexWrap: 'wrap'}}>
           {/* User balance */}
           <div style={{flexBasis: '30%'}}>
-            <BalanceBlock asset={`Balance`} balance={balance} suffix={" ESD"}/>
+            <BalanceBlock asset={`Balance`} balance={balance} suffix={` ${CURRENCY}`}/>
           </div>
           <div style={{flexBasis: '38%'}}/>
           {/* Purchase coupons */}
@@ -53,7 +54,7 @@ function PurchaseCoupons({
               <div style={{width: '60%', minWidth: '6em'}}>
                 <>
                   <BigNumberInput
-                    adornment="ESD"
+                    adornment={CURRENCY}
                     value={purchaseAmount}
                     setter={(value) => {
                       setPurchaseAmount(value);

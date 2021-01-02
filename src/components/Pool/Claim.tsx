@@ -10,6 +10,7 @@ import {claimPool} from '../../utils/web3';
 import {isPos, toBaseUnitBN} from '../../utils/number';
 import {ESD} from "../../constants/tokens";
 import BigNumberInput from "../common/BigNumberInput";
+import { CURRENCY } from '../../configs';
 
 type ClaimProps = {
   poolAddress: string
@@ -27,7 +28,7 @@ function Claim({
       <div style={{display: 'flex', flexWrap: 'wrap'}}>
         {/* total Issued */}
         <div style={{flexBasis: '32%'}}>
-          <BalanceBlock asset="Claimable" balance={claimable} suffix={"ESD"} />
+          <BalanceBlock asset="Claimable" balance={claimable} suffix={CURRENCY} />
         </div>
         {/* Deposit UNI-V2 into Pool */}
         <div style={{flexBasis: '35%'}}/>
@@ -36,7 +37,7 @@ function Claim({
             <div style={{width: '60%', minWidth: '6em'}}>
               <>
                 <BigNumberInput
-                  adornment="ESD"
+                  adornment={CURRENCY}
                   value={claimAmount}
                   setter={setClaimAmount}
                   disabled={status !== 0}

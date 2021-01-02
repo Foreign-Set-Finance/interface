@@ -8,6 +8,7 @@ import { toTokenUnitsBN } from '../../utils/number';
 import TradePageHeader from './Header';
 import {ESD, UNI, USDC} from "../../constants/tokens";
 import IconHeader from "../common/IconHeader";
+import { CURRENCY, PAIR_ADDRESS, USDC_ADDRESS, TOKEN_ADDRESS } from '../../configs'
 
 
 function UniswapPool({ user }: {user: string}) {
@@ -55,9 +56,9 @@ function UniswapPool({ user }: {user: string}) {
         <div style={{ flexBasis: '30%', marginRight: '3%', marginLeft: '2%'  }}>
           <MainButton
             title="Info"
-            description="View ESD-USDC pool stats."
+            description={`View ${CURRENCY}-USDC pool stats.`}
             icon={<i className="fas fa-chart-area"/>}
-            href={"https://uniswap.info/pair/0x88ff79eb2bc5850f27315415da8685282c7610f9"}
+            href={`https://uniswap.info/pair/${PAIR_ADDRESS}`}
           />
         </div>
 
@@ -66,7 +67,7 @@ function UniswapPool({ user }: {user: string}) {
             title="Trade"
             description="Trade døllar tokens."
             icon={<i className="fas fa-exchange-alt"/>}
-            href={"https://uniswap.exchange/swap?inputCurrency=0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48&outputCurrency=0x36f3fd68e7325a35eb768f1aedaae9ea0689d723"}
+            href={`https://uniswap.exchange/swap?inputCurrency=${USDC_ADDRESS}&outputCurrency=${TOKEN_ADDRESS}`}
           />
         </div>
 
@@ -75,7 +76,7 @@ function UniswapPool({ user }: {user: string}) {
             title="Supply"
             description="Supply and redeem liquidity."
             icon={<i className="fas fa-water"/>}
-            href={"https://uniswap.exchange/add/0x36f3fd68e7325a35eb768f1aedaae9ea0689d723/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"}
+            href={`https://uniswap.exchange/add/${TOKEN_ADDRESS}/${USDC_ADDRESS}`}
           />
         </div>
       </div>

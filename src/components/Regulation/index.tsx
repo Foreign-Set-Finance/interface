@@ -17,7 +17,6 @@ import {getLegacyPoolAddress, getPoolAddress} from "../../utils/pool";
 const ONE_COUPON = new BigNumber(10).pow(18);
 
 function Regulation({ user }: {user: string}) {
-
   const [totalSupply, setTotalSupply] = useState(new BigNumber(0));
   const [totalBonded, setTotalBonded] = useState(new BigNumber(0));
   const [totalStaged, setTotalStaged] = useState(new BigNumber(0));

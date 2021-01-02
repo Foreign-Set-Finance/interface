@@ -39,8 +39,8 @@ function NavBar({
         <div style={{maxWidth: '1100px', marginLeft: 'auto', marginRight: 'auto'}}>
           <div style={{ display: 'flex', paddingTop: '24px'}}>
             <div style={{ width: '20%', textAlign: 'left'}}>
-              <LinkBase onClick={() => history.push('/')} style={{marginRight: '16px', height: '40px'}}>
-                <img src={logoUrl} height="40px" alt="Empty Set Dollar"/>
+              <LinkBase onClick={() => history.push('/')} style={{marginRight: '16px', height: '40px', fontSize: '20px'}}>
+                Foreign Set Euro
               </LinkBase>
             </div>
             <div style={{ width: '60%', textAlign: 'center' }}>

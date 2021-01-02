@@ -4,6 +4,7 @@ import BigNumber from 'bignumber.js';
 import { BalanceBlock } from '../common/index';
 import TextBlock from "../common/TextBlock";
 import {ownership} from "../../utils/number";
+import { CURRENCY } from '../../configs'
 
 type PoolPageHeaderProps = {
   accountUNIBalance: BigNumber,
@@ -29,10 +30,10 @@ const PoolPageHeader = ({
       <BalanceBlock asset="Balance" balance={accountUNIBalance}  suffix={" UNI-V2"}/>
     </div>
     <div style={{ flexBasis: '20%' }}>
-      <BalanceBlock asset="Rewarded" balance={accountRewardedESDBalance} suffix={" ESD"} />
+      <BalanceBlock asset="Rewarded" balance={accountRewardedESDBalance} suffix={` ${CURRENCY}`} />
     </div>
     <div style={{ flexBasis: '20%' }}>
-      <BalanceBlock asset="Claimable" balance={accountClaimableESDBalance} suffix={" ESD"} />
+      <BalanceBlock asset="Claimable" balance={accountClaimableESDBalance} suffix={` ${CURRENCY}`} />
     </div>
     <div style={{ flexBasis: '20%' }}>
       <BalanceBlock asset="Pool Ownership" balance={ownership(accountBondedBalance, poolTotalBonded)}  suffix={"%"}/>

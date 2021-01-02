@@ -25,11 +25,11 @@ function Footer({updateTheme, theme, hasWeb3}: FooterProps) {
         fontSize: '14px'
       }}>
         <div style={{maxWidth: '1100px', marginLeft: 'auto', marginRight: 'auto'}}>
-          <div style={{ padding: '2%', display: 'flex'}}>
+          <div style={{ padding: '2%', display: 'flex', justifyContent: 'space-between' }}>
             <div style={{ width: '50%', textAlign: 'left' }}>
               <FooterLink icon={<i className="fab fa-github"/>} href={"https://github.com/foreign-set-finance"}/>
               <FooterLink icon={<i className="fab fa-twitter"/>} href={"https://twitter.com/foreignset"}/>
-              <FooterLink icon={<i className="fab fa-medium"/>} href={"https://www.medium.com/@emptysetsquad"}/>
+              <FooterLink icon={<i className="fab fa-medium"/>} href={"https://medium.com/@foreignsetfinance"}/>
               <FooterLink icon={<i className="fab fa-telegram"/>} href={"https://www.t.me/emptysetdollar"}/>
               <FooterLink icon={<i className="fab fa-discord"/>} href={"https://discord.gg/2zw4ZjH4xS"}/>
             </div>
