@@ -60,13 +60,14 @@ function HomePage({user}: HomePageProps) {
         </div>
       </div>
       <div style={{ padding: '1%', display: 'flex', flexWrap: 'wrap', alignItems: 'center' }}>
+        
         <div style={{ flexBasis: '30%', marginRight: '3%', marginLeft: '2%'  }}>
           <MainButton
-            title="DAO"
+            title="Earn"
             description="Earn rewards for governing"
             icon={<i className="fas fa-dot-circle"/>}
             onClick={() => {
-              history.push('/dao/');
+              history.push('/earn/');
             }}
           />
         </div>
@@ -84,23 +85,21 @@ function HomePage({user}: HomePageProps) {
 
         <div style={{ flexBasis: '30%', marginLeft: '3%', marginRight: '2%' }}>
           <MainButton
-            title="Regulation"
+            title="Price"
             description="Network supply regulation statistics."
             icon={<i className="fas fa-chart-area"/>}
-            onClick={() => {
-              history.push('/regulation/');
-            }}
+            onClick={() => {}}
           />
         </div>
       </div>
       <div style={{ padding: '1%', display: 'flex', flexWrap: 'wrap', alignItems: 'center' }}>
         <div style={{ flexBasis: '30%', marginRight: '3%', marginLeft: '2%' }}>
           <MainButton
-            title="Governance"
-            description="Vote on upgrades."
-            icon={<i className="fas fa-poll"/>}
+            title="Regulation"
+            description="Network supply regulation statistics."
+            icon={<i className="fas fa-chart-area"/>}
             onClick={() => {
-              history.push('/governance/');
+              history.push('/regulation/');
             }}
           />
         </div>

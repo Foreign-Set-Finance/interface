@@ -27,14 +27,11 @@ function Footer({updateTheme, theme, hasWeb3}: FooterProps) {
         <div style={{maxWidth: '1100px', marginLeft: 'auto', marginRight: 'auto'}}>
           <div style={{ padding: '2%', display: 'flex'}}>
             <div style={{ width: '50%', textAlign: 'left' }}>
-              <FooterLink icon={<i className="fab fa-github"/>} href={"https://www.github.com/emptysetsquad/dollar"}/>
-              <FooterLink icon={<i className="fab fa-twitter"/>} href={"https://www.twitter.com/emptysetsquad"}/>
+              <FooterLink icon={<i className="fab fa-github"/>} href={"https://github.com/foreign-set-finance"}/>
+              <FooterLink icon={<i className="fab fa-twitter"/>} href={"https://twitter.com/foreignset"}/>
               <FooterLink icon={<i className="fab fa-medium"/>} href={"https://www.medium.com/@emptysetsquad"}/>
               <FooterLink icon={<i className="fab fa-telegram"/>} href={"https://www.t.me/emptysetdollar"}/>
-              <FooterLink icon={<i className="fab fa-discord"/>} href={"https://discord.gg/vPws9Vp"}/>
-            </div>
-            <div style={{ width: '45%', textAlign: 'right', height: '18px', marginTop: '15px', marginBottom: '15px'}}>
-              made with <span role="img" aria-labelledby="heartbreak">💔️</span> by the &#123;ess&#125;.
+              <FooterLink icon={<i className="fab fa-discord"/>} href={"https://discord.gg/2zw4ZjH4xS"}/>
             </div>
             <div style={{ width: '5%', textAlign: 'right', marginTop: '4px' }}>
               <ChangeModeButton hasWeb3={hasWeb3} theme={theme} updateTheme={updateTheme} />

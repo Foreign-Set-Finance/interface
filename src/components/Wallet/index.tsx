@@ -100,7 +100,7 @@ function Wallet({ user }: {user: string}) {
 
   return (
     <>
-      <IconHeader icon={<i className="fas fa-dot-circle"/>} text="DAO"/>
+      <IconHeader icon={<i className="fas fa-dot-circle"/>} text="Earn"/>
 
       <AccountPageHeader
         accountESDBalance={userESDBalance}

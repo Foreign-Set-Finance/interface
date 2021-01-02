@@ -4,6 +4,7 @@ import BigNumber from 'bignumber.js';
 import { BalanceBlock } from '../common/index';
 import TextBlock from "../common/TextBlock";
 import {ownership} from "../../utils/number";
+import { CURRENCY } from '../../configs'
 
 type AccountPageHeaderProps = {
   accountESDBalance: BigNumber,
@@ -26,16 +27,16 @@ const AccountPageHeader = ({
 }: AccountPageHeaderProps) => (
   <div style={{ padding: '2%', display: 'flex', flexWrap: 'wrap', alignItems: 'center' }}>
     <div style={{ flexBasis: '20%' }}>
-      <BalanceBlock asset="Balance" balance={accountESDBalance} suffix={" ESD"}/>
+      <BalanceBlock asset="Balance" balance={accountESDBalance} suffix={` ${CURRENCY}`}/>
     </div>
     <div style={{ flexBasis: '20%' }}>
-      <BalanceBlock asset="Staged" balance={accountStagedBalance}  suffix={" ESD"}/>
+      <BalanceBlock asset="Staged" balance={accountStagedBalance}  suffix={` ${CURRENCY}`}/>
     </div>
     <div style={{ flexBasis: '20%' }}>
-      <BalanceBlock asset="Bonded" balance={accountBondedBalance} suffix={" ESD"} />
+      <BalanceBlock asset="Bonded" balance={accountBondedBalance} suffix={` ${CURRENCY}`} />
     </div>
     <div style={{ flexBasis: '20%' }}>
-      <BalanceBlock asset="DAO Ownership" balance={ownership(accountESDSBalance, totalESDSSupply)}  suffix={"%"}/>
+      <BalanceBlock asset="Pool Ownership" balance={ownership(accountESDSBalance, totalESDSSupply)}  suffix={"%"}/>
     </div>
     <div style={{ flexBasis: '20%' }}>
       <TextBlock label="Status" text={status(accountStatus, unlocked)}/>

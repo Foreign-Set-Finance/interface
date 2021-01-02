@@ -11,6 +11,7 @@ import {isPos, toBaseUnitBN} from '../../utils/number';
 import { ESD, ESDS } from "../../constants/tokens";
 import BigNumberInput from "../common/BigNumberInput";
 import TextBlock from "../common/TextBlock";
+import { CURRENCY } from '../../configs'
 
 type BondUnbondProps = {
   staged: BigNumber,
@@ -30,7 +31,7 @@ function BondUnbond({
       <div style={{display: 'flex', flexWrap: 'wrap'}}>
         {/* Total bonded */}
         <div style={{flexBasis: '16%'}}>
-          <BalanceBlock asset="Bonded" balance={bonded} suffix={"ESD"}/>
+          <BalanceBlock asset="Bonded" balance={bonded} suffix={CURRENCY}/>
         </div>
         {/* Total bonded */}
         <div style={{flexBasis: '16%'}}>
@@ -42,7 +43,7 @@ function BondUnbond({
             <div style={{width: '60%', minWidth: '6em'}}>
               <>
                 <BigNumberInput
-                  adornment="ESD"
+                  adornment={CURRENCY}
                   value={bondAmount}
                   setter={setBondAmount}
                 />
@@ -76,7 +77,7 @@ function BondUnbond({
             <div style={{width: '60%', minWidth: '6em'}}>
               <>
                 <BigNumberInput
-                  adornment="ESD"
+                  adornment={CURRENCY}
                   value={unbondAmount}
                   setter={setUnbondAmount}
                 />
