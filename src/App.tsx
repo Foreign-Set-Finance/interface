@@ -12,8 +12,6 @@ import Footer from './components/Footer';
 import Wallet from "./components/Wallet";
 import EpochDetail from "./components/EpochDetail";
 import CouponMarket from "./components/CouponMarket";
-import Governance from "./components/Governance";
-import Candidate from "./components/Candidate";
 import Regulation from "./components/Regulation";
 import Pool from "./components/Pool";
 import HomePageNoWeb3 from "./components/HomePageNoWeb3";
