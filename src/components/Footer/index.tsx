@@ -30,7 +30,7 @@ function Footer({updateTheme, theme, hasWeb3}: FooterProps) {
               <FooterLink icon={<i className="fab fa-github"/>} href={"https://github.com/foreign-set-finance"}/>
               <FooterLink icon={<i className="fab fa-twitter"/>} href={"https://twitter.com/foreignset"}/>
               <FooterLink icon={<i className="fab fa-medium"/>} href={"https://medium.com/@foreignsetfinance"}/>
-              <FooterLink icon={<i className="fab fa-telegram"/>} href={"https://www.t.me/emptysetdollar"}/>
+              <FooterLink icon={<i className="fab fa-telegram"/>} href={"https://t.me/foreignsetfinance"}/>
               <FooterLink icon={<i className="fab fa-discord"/>} href={"https://discord.gg/2zw4ZjH4xS"}/>
             </div>
             <div style={{ width: '5%', textAlign: 'right', marginTop: '4px' }}>
