@@ -5,7 +5,7 @@ import { addLiquidity } from '../../utils/web3';
 
 import { BalanceBlock, MaxButton, PriceSection } from '../common/index';
 import {toBaseUnitBN, toTokenUnitsBN} from '../../utils/number';
-import {ESD, UNI, USDC} from "../../constants/tokens";
+import {ESD, UNI, USDC} from "../../configs";
 import {SLIPPAGE} from "../../utils/calculation";
 import BigNumberInput from "../common/BigNumberInput";
 

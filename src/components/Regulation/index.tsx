@@ -6,7 +6,7 @@ import {
   getPoolTotalClaimable, getPoolTotalRewarded, getTokenBalance,
   getTokenTotalSupply, getTotalBonded, getTotalCoupons, getTotalDebt, getTotalRedeemable, getTotalStaged,
 } from '../../utils/infura';
-import {ESD, ESDS, UNI} from "../../constants/tokens";
+import {ESD, ESDS, UNI} from "../../configs";
 import {toTokenUnitsBN} from "../../utils/number";
 import BigNumber from "bignumber.js";
 import RegulationHeader from "./Header";

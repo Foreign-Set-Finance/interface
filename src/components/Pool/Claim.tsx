@@ -8,7 +8,7 @@ import {
 } from '../common/index';
 import {claimPool} from '../../utils/web3';
 import {isPos, toBaseUnitBN} from '../../utils/number';
-import {ESD} from "../../constants/tokens";
+import {ESD} from "../../configs";
 import BigNumberInput from "../common/BigNumberInput";
 import { CURRENCY } from '../../configs';
 

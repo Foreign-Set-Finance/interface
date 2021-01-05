@@ -8,8 +8,8 @@ import {
 } from '../common/index';
 import {approve, providePool} from '../../utils/web3';
 import {isPos, toBaseUnitBN, toTokenUnitsBN} from '../../utils/number';
-import {ESD, USDC} from "../../constants/tokens";
-import {MAX_UINT256} from "../../constants/values";
+import {ESD, USDC} from "../../configs";
+import {MAX_UINT256} from "../../configs/values.js";
 import BigNumberInput from "../common/BigNumberInput";
 
 type ProvideProps = {

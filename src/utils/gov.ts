@@ -1,4 +1,4 @@
-import {GOVERNANCE_PROPOSAL_THRESHOLD, GOVERNANCE_QUORUM} from "../constants/values";
+import {GOVERNANCE_PROPOSAL_THRESHOLD, GOVERNANCE_QUORUM} from "../configs/values";
 import BigNumber from "bignumber.js";
 
 export function proposalStatus(epoch, start, period, initialized, approve, reject, total): string {

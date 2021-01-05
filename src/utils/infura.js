@@ -1,15 +1,14 @@
 import Web3 from 'web3';
 
 import BigNumber from 'bignumber.js';
-import { UniswapV2Router02 } from '../constants/contracts';
-import { ESD, UNI, USDC } from '../constants/tokens';
-import { POOL_EXIT_LOCKUP_EPOCHS } from '../constants/values';
+import { ESD, UNI, USDC, UniswapV2Router02 } from '../configs';
+import { POOL_EXIT_LOCKUP_EPOCHS } from '../configs/values';
 
-const dollarAbi = require('../constants/abi/Dollar.json');
-const daoAbi = require('../constants/abi/Implementation.json');
-const poolAbi = require('../constants/abi/Pool.json');
-const uniswapRouterAbi = require('../constants/abi/UniswapV2Router02.json');
-const uniswapPairAbi = require('../constants/abi/UniswapV2Pair.json');
+const dollarAbi = require('../configs/abi/Dollar.json');
+const daoAbi = require('../configs/abi/Implementation.json');
+const poolAbi = require('../configs/abi/Pool.json');
+const uniswapRouterAbi = require('../configs/abi/UniswapV2Router02.json');
+const uniswapPairAbi = require('../configs/abi/UniswapV2Pair.json');
 
 let web3;
 // eslint-disable-next-line no-undef

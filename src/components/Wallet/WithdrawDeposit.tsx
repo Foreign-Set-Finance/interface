@@ -8,8 +8,8 @@ import {
 } from '../common/index';
 import {approve, deposit, withdraw} from '../../utils/web3';
 import {isPos, toBaseUnitBN} from '../../utils/number';
-import {ESD, ESDS} from "../../constants/tokens";
-import {MAX_UINT256} from "../../constants/values";
+import {ESD, ESDS} from "../../configs";
+import {MAX_UINT256} from "../../configs/values";
 import BigNumberInput from "../common/BigNumberInput";
 import { CURRENCY } from '../../configs'
 

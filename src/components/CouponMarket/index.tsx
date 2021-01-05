@@ -9,7 +9,7 @@ import {
   getTokenTotalSupply, getTotalCoupons,
   getTotalDebt, getTotalRedeemable,
 } from '../../utils/infura';
-import {ESD, ESDS} from "../../constants/tokens";
+import {ESD, ESDS} from "../../configs";
 import CouponMarketHeader from "./Header";
 import {toTokenUnitsBN} from "../../utils/number";
 import BigNumber from "bignumber.js";

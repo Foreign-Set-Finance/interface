@@ -7,7 +7,7 @@ import {mintTestnetUSDC} from '../../utils/web3';
 
 import { BalanceBlock } from '../common/index';
 import {isPos, toBaseUnitBN} from '../../utils/number';
-import {USDC} from "../../constants/tokens";
+import {USDC} from "../../configs";
 import BigNumberInput from "../common/BigNumberInput";
 
 type MintUSDCProps = {

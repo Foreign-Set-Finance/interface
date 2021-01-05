@@ -5,9 +5,8 @@ import {
 import BigNumber from 'bignumber.js';
 import { approve } from '../../utils/web3';
 
-import {ESD, USDC} from "../../constants/tokens";
-import {MAX_UINT256} from "../../constants/values";
-import {UniswapV2Router02} from "../../constants/contracts";
+import {ESD, USDC, UniswapV2Router02} from "../../configs";
+import {MAX_UINT256} from "../../configs/values.js";
 
 type UniswapApproveCollateralProps = {
   user: string,

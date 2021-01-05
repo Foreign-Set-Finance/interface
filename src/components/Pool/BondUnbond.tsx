@@ -8,7 +8,7 @@ import {
 } from '../common/index';
 import {bondPool, unbondPool} from '../../utils/web3';
 import {isPos, toBaseUnitBN} from '../../utils/number';
-import {UNI} from "../../constants/tokens";
+import {UNI} from "../../configs";
 import BigNumberInput from "../common/BigNumberInput";
 import TextBlock from "../common/TextBlock";
 

@@ -6,7 +6,7 @@ import { getTokenBalance } from '../../utils/infura';
 import { toTokenUnitsBN } from '../../utils/number';
 
 import TradePageHeader from './Header';
-import {ESD, UNI, USDC} from "../../constants/tokens";
+import {ESD, UNI, USDC} from "../../configs";
 import IconHeader from "../common/IconHeader";
 import { CURRENCY, PAIR_ADDRESS, USDC_ADDRESS, TOKEN_ADDRESS } from '../../configs'
 

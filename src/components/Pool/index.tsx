@@ -11,8 +11,8 @@ import {
   getTokenBalance,
   getPoolFluidUntil
 } from '../../utils/infura';
-import {ESD, UNI, USDC} from "../../constants/tokens";
-import {POOL_EXIT_LOCKUP_EPOCHS} from "../../constants/values";
+import {ESD, UNI, USDC} from "../../configs";
+import {POOL_EXIT_LOCKUP_EPOCHS} from "../../configs/values.js";
 import { toTokenUnitsBN } from '../../utils/number';
 import { Header } from '@aragon/ui';
 
@@ -24,7 +24,7 @@ import Provide from "./Provide";
 import IconHeader from "../common/IconHeader";
 import Migrate from "./Migrate";
 import {getLegacyPoolAddress, getPoolAddress} from "../../utils/pool";
-import {DollarPool4} from "../../constants/contracts";
+import {DollarPool} from "../../configs";
 
 
 
@@ -151,7 +151,7 @@ function Pool({ user }: {user: string}) {
         setLegacyUserRewardedBalance(new BigNumber(legacyUserRewardedBalance));
         setLegacyUserClaimableBalance(new BigNumber(legacyUserClaimableBalance));
         setLegacyUserStatus(legacyUserStatus);
-        setLockup(poolAddressStr === DollarPool4 ? POOL_EXIT_LOCKUP_EPOCHS : 1);
+        setLockup(poolAddressStr === DollarPool ? POOL_EXIT_LOCKUP_EPOCHS : 1);
       }
     }
     updateUserInfo();

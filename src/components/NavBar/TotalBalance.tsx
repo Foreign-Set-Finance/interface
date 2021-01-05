@@ -7,7 +7,7 @@ import {
   getTokenBalance,
   getTokenTotalSupply
 } from "../../utils/infura";
-import {ESD, ESDS, UNI} from "../../constants/tokens";
+import {ESD, ESDS, UNI} from "../../configs";
 import {formatBN, toTokenUnitsBN} from "../../utils/number";
 import {getPoolAddress} from "../../utils/pool";
 

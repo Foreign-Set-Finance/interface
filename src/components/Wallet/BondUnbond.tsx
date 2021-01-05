@@ -8,7 +8,7 @@ import {
 } from '../common/index';
 import { bond, unbondUnderlying } from '../../utils/web3';
 import {isPos, toBaseUnitBN} from '../../utils/number';
-import { ESD, ESDS } from "../../constants/tokens";
+import { ESD, ESDS } from "../../configs";
 import BigNumberInput from "../common/BigNumberInput";
 import TextBlock from "../common/TextBlock";
 import { CURRENCY } from '../../configs'

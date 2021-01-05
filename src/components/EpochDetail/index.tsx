@@ -3,7 +3,7 @@ import { Header } from '@aragon/ui';
 
 import {getEpoch, getEpochTime,
 } from '../../utils/infura';
-import {ESDS} from "../../constants/tokens";
+import {ESDS} from "../../configs";
 import AdvanceEpoch from './AdvanceEpoch';
 import EpochPageHeader from "./Header";
 import IconHeader from "../common/IconHeader";

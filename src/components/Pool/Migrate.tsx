@@ -8,7 +8,7 @@ import {
 } from '../common/index';
 import {claimPool, unbondPool, withdrawPool} from '../../utils/web3';
 import {isPos, toBaseUnitBN} from '../../utils/number';
-import {ESD, UNI} from "../../constants/tokens";
+import {ESD, UNI} from "../../configs";
 
 type MigrateProps = {
   legacyPoolAddress: string,

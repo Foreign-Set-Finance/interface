@@ -1,3 +1,12 @@
+export const CURRENCY = 'FSEUR';
+export const PAIR_ADDRESS = ''; // Streamline these
+export const USDC_ADDRESS = '';
+export const TOKEN_ADDRESS = '';
+
+export const UniswapV2Router02 = '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D';
+
+export const DollarPool = '0x4082D11E506e3250009A991061ACd2176077C88f';
+
 export const UNI = {
   addr: '0x88ff79eB2Bc5850F27315415da8685282C7610F9',
   decimals: 18,

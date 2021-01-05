@@ -12,7 +12,7 @@ import { getCost, getProceeds } from '../../utils/infura';
 
 
 import {isPos, toBaseUnitBN, toTokenUnitsBN} from '../../utils/number';
-import {ESD, USDC} from "../../constants/tokens";
+import {ESD, USDC} from "../../configs";
 import {decreaseWithSlippage, increaseWithSlippage} from "../../utils/calculation";
 import BigNumberInput from "../common/BigNumberInput";
 

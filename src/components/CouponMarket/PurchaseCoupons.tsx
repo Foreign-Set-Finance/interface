@@ -9,11 +9,10 @@ import {
 import {approve, purchaseCoupons} from '../../utils/web3';
 
 import {isPos, toBaseUnitBN, toTokenUnitsBN} from '../../utils/number';
-import {ESD, ESDS} from "../../constants/tokens";
-import {MAX_UINT256} from "../../constants/values";
+import {ESD, ESDS, CURRENCY} from "../../configs";
+import {MAX_UINT256} from "../../configs/values.js";
 import {getCouponPremium} from "../../utils/infura";
 import BigNumberInput from "../common/BigNumberInput";
-import { CURRENCY } from '../../configs'
 
 type PurchaseCouponsProps = {
   user: string,

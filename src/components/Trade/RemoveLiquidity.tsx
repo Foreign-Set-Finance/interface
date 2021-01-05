@@ -8,7 +8,7 @@ import { removeLiquidity } from '../../utils/web3';
 import { BalanceBlock, MaxButton, PriceSection } from '../common/index';
 import { toBaseUnitBN } from '../../utils/number';
 import {decreaseWithSlippage} from "../../utils/calculation";
-import {ESD, UNI, USDC} from "../../constants/tokens";
+import {ESD, UNI, USDC} from "../../configs";
 import BigNumberInput from "../common/BigNumberInput";
 
 type RemoveLiquidityProps = {

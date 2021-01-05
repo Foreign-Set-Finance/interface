@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, Button, useTheme } from '@aragon/ui';
 import { getPreference, storePreference } from "../../utils/storage";
-import { COUPON_EXPIRATION } from "../../constants/values";
+import { COUPON_EXPIRATION } from "../../configs/values.js";
 
 function ModalWarning() {
   const storedShowWarning = getPreference('showCouponWarning', '1');

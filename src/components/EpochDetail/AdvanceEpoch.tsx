@@ -4,7 +4,7 @@ import {
 } from '@aragon/ui';
 import {advance} from '../../utils/web3';
 import NumberBlock from "../common/NumberBlock";
-import {ESDS} from "../../constants/tokens";
+import {ESDS} from "../../configs";
 
 type AdvanceEpochProps = {
   user: string,

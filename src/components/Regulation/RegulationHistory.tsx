@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { DataView } from '@aragon/ui';
 
 import {getAllRegulations} from '../../utils/infura';
-import {ESD, ESDS} from "../../constants/tokens";
+import {ESD, ESDS} from "../../configs";
 import {formatBN, toTokenUnitsBN} from "../../utils/number";
 import BigNumber from "bignumber.js";
 

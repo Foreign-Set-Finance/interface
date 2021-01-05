@@ -4,7 +4,7 @@ import {
 } from '@aragon/ui';
 
 import {getBatchBalanceOfCoupons, getBatchCouponsExpiration, getCouponEpochs} from '../../utils/infura';
-import {ESD, ESDS} from "../../constants/tokens";
+import {ESD, ESDS} from "../../configs";
 import {formatBN, toBaseUnitBN, toTokenUnitsBN} from "../../utils/number";
 import BigNumber from "bignumber.js";
 import {redeemCoupons} from "../../utils/web3";
