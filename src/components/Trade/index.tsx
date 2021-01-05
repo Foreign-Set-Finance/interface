@@ -6,10 +6,8 @@ import { getTokenBalance } from '../../utils/infura';
 import { toTokenUnitsBN } from '../../utils/number';
 
 import TradePageHeader from './Header';
-import {ESD, UNI, USDC} from "../../configs";
+import {ESD, UNI, USDC, CURRENCY} from "../../configs";
 import IconHeader from "../common/IconHeader";
-import { CURRENCY, PAIR_ADDRESS, USDC_ADDRESS, TOKEN_ADDRESS } from '../../configs'
-
 
 function UniswapPool({ user }: {user: string}) {
   const [pairBalanceESD, setPairBalanceESD] = useState(new BigNumber(0));
@@ -58,7 +56,7 @@ function UniswapPool({ user }: {user: string}) {
             title="Info"
             description={`View ${CURRENCY}-USDC pool stats.`}
             icon={<i className="fas fa-chart-area"/>}
-            href={`https://uniswap.info/pair/${PAIR_ADDRESS}`}
+            href={`https://uniswap.info/pair/${UNI.addr}`}
           />
         </div>
 
@@ -67,7 +65,7 @@ function UniswapPool({ user }: {user: string}) {
             title="Trade"
             description="Trade døllar tokens."
             icon={<i className="fas fa-exchange-alt"/>}
-            href={`https://uniswap.exchange/swap?inputCurrency=${USDC_ADDRESS}&outputCurrency=${TOKEN_ADDRESS}`}
+            href={`https://uniswap.exchange/swap?inputCurrency=${USDC.addr}&outputCurrency=${ESD.addr}`}
           />
         </div>
 
@@ -76,7 +74,7 @@ function UniswapPool({ user }: {user: string}) {
             title="Supply"
             description="Supply and redeem liquidity."
             icon={<i className="fas fa-water"/>}
-            href={`https://uniswap.exchange/add/${TOKEN_ADDRESS}/${USDC_ADDRESS}`}
+            href={`https://uniswap.exchange/add/${ESD.addr}/${USDC.addr}`}
           />
         </div>
       </div>
