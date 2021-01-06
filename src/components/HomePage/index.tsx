@@ -4,9 +4,11 @@ import {
   Box, LinkBase, Tag,
 } from '@aragon/ui';
 import EpochBlock from "../common/EpochBlock";
+import { EPOCH_START } from '../../configs'
 
 function epochformatted() {
-  const epochStart = 1599148800;
+  const epochStart = EPOCH_START;
+  //1609853797681
   const epochPeriod = 8 * 60 * 60;
   const hour = 60 * 60;
   const minute = 60;

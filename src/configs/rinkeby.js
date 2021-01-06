@@ -1,11 +1,12 @@
 export const CURRENCY = 'FSEUR';
+export const EPOCH_START = 1609148800;
 
 export const UniswapV2Router02 = '0x7a250d5630b4cf539739df2c5dacb4c659f2488d';
 
 export const DollarPool = '0x90845C5E11f50569ac6D8E90fc383Ca937A5c839';
 
 export const UNI = {
-  addr: '',
+  addr: '0xe5c859f32e0e3f5349d1ee88734b0ab4d7dfef62',
   decimals: 18,
   symbol: 'UNI',
 };
