@@ -3,6 +3,7 @@ import React, {useEffect, useState} from 'react';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import { Main, Layout } from '@aragon/ui';
 import { UseWalletProvider } from 'use-wallet';
+import { NETWORK, NETWORK_NAME } from './configs'
 import { updateModalMode } from './utils/web3';
 import { storePreference, getPreference } from './utils/storage';
 import NavBar from './components/NavBar';
@@ -52,11 +53,11 @@ function App() {
   return (
     <Router>
       <UseWalletProvider
-        chainId={1}
+        chainId={NETWORK}
         connectors={{
-          walletconnect: { rpcUrl: 'https://mainnet.eth.aragon.network/' },
+          walletconnect: { rpcUrl: `https://${NETWORK_NAME}.eth.aragon.network/` },
           walletlink: {
-            url: 'https://mainnet.eth.aragon.network/',
+            url: `https://${NETWORK_NAME}.eth.aragon.network/`,
             appName:'Coinbase Wallet',
             appLogoUrl: ''
           }

@@ -3,10 +3,16 @@ export const EPOCH_START = 1609148800;
 
 export const UniswapV2Router02 = '0x7a250d5630b4cf539739df2c5dacb4c659f2488d';
 
-export const DollarPool = '0x90845C5E11f50569ac6D8E90fc383Ca937A5c839';
+export const DollarPool = '0x50f7955B5fe012e5037E34f4d1334e3841a82f3B';
+
+export const Oracle = '0x15931Ac2d0864C27eE281029eBAeC0e6851c99d1';
+
+export const NETWORK = 4;
+
+export const NETWORK_NAME = 'rinkeby';
 
 export const UNI = {
-  addr: '0xe5c859f32e0e3f5349d1ee88734b0ab4d7dfef62',
+  addr: '0x497616273c9fc97309e7bdd9dc762b1ac1844172',
   decimals: 18,
   symbol: 'UNI',
 };
@@ -18,13 +24,13 @@ export const USDC = {
 };
 
 export const ESD = {
-  addr: '0x1Be4227E7Acf6aaD0ce543C7Fe0bfBB85f7D191F',
+  addr: '0x466A2eA914590338F00434688F0fa9AFbb0F4F2A',
   decimals: 18,
   symbol: 'ESD',
 };
 
 export const ESDS = {
-  addr: '0x390c5bF1CD0422b130BDD7414524050c440A7D48',
+  addr: '0x34d5c9b6B8021b4574e8Aa3414a64EC86Ad17d93',
   decimals: 18,
   symbol: 'ESDS',
 };

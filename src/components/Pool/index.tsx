@@ -83,6 +83,7 @@ function Pool({ user }: {user: string}) {
 
     async function updateUserInfo() {
       const poolAddressStr = await getPoolAddress();
+
       const legacyPoolAddress = getLegacyPoolAddress(poolAddressStr);
 
       const [
