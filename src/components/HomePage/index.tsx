@@ -67,7 +67,7 @@ function HomePage({user}: HomePageProps) {
         <div style={{ flexBasis: '30%', marginRight: '3%', marginLeft: '2%'  }}>
           <MainButton
             title="Earn"
-            description="Earn rewards for governing"
+            description="Earn rewards for bonding"
             icon={<i className="fas fa-dot-circle"/>}
             onClick={() => {
               history.push('/earn/');
