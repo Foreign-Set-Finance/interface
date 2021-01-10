@@ -163,24 +163,19 @@ function MainButton({
 
 function Price() {
   const [price, setPrice] = useState('...');
-  const [scaling, setScaling] = useState('');
 
   useEffect(() => {
     async function updatePrice() {
       const value = await getFXPrice();
 
       setPrice(value.decimalPlaces(4).toString());
-
-      const scalingFactor = value.minus(1).dividedBy(12).plus(1).decimalPlaces(4);
-
-      setScaling(Math.max(scalingFactor.toNumber(), 1).toString());
     }
 
     updatePrice();
   }, [])
 
   return (
-    <a href={`https://app.uniswap.org/#/swap?inputCurrency=${USDC.addr}&outputCurrency=${ESD.addr}`} target="_blank" style={{ textDecoration: 'none' }}>
+    <a href={`https://app.uniswap.org/#/swap?inputCurrency=${USDC.addr}&outputCurrency=${ESD.addr}`} rel="noopener noreferrer" target="_blank" style={{ textDecoration: 'none' }}>
       <Box>
         <div style={{ paddingTop: 10, paddingBottom: 10, fontSize: 18 }}>
           FSEUR-EUR
