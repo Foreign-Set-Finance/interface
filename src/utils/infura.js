@@ -1,12 +1,13 @@
 import Web3 from 'web3';
 
 import BigNumber from 'bignumber.js';
-import { ESD, UNI, USDC, UniswapV2Router02 } from '../configs';
+import { ESD, UNI, USDC, UniswapV2Router02, Oracle } from '../configs';
 import { POOL_EXIT_LOCKUP_EPOCHS } from '../configs/values';
 
 const dollarAbi = require('../configs/abi/Dollar.json');
 const daoAbi = require('../configs/abi/Implementation.json');
 const poolAbi = require('../configs/abi/Pool.json');
+const oracleAbi = require('../configs/abi/Oracle.json')
 const uniswapRouterAbi = require('../configs/abi/UniswapV2Router02.json');
 const uniswapPairAbi = require('../configs/abi/UniswapV2Pair.json');
 
@@ -26,7 +27,7 @@ if (window.ethereum !== undefined) {
 export const getTokenBalance = async (token, account) => {
   if (account === '') return '0';
   const tokenContract = new web3.eth.Contract(dollarAbi, token);
-  return tokenContract.methods.balanceOf(account).call();
+  return await tokenContract.methods.balanceOf(account).call();
 };
 
 export const getTokenTotalSupply = async (token) => {
@@ -447,13 +448,26 @@ export const getReserves = async () => {
 
 export const getInstantaneousPrice = async () => {
   const [reserve, token0] = await Promise.all([getReserves(), getToken0()]);
-  const token0Balance = new BigNumber(reserve.reserve0);
-  const token1Balance = new BigNumber(reserve.reserve1);
+  const token0Balance = new BigNumber(reserve._reserve0);
+  const token1Balance = new BigNumber(reserve._reserve1);
+
   if (token0.toLowerCase() === USDC.addr.toLowerCase()) {
     return token0Balance.multipliedBy(new BigNumber(10).pow(12)).dividedBy(token1Balance);
   }
   return token1Balance.multipliedBy(new BigNumber(10).pow(12)).dividedBy(token0Balance);
 };
+
+export const getFXPrice = async () => {
+  const oracleContract = new web3.eth.Contract(oracleAbi, Oracle)
+
+  const bigIntEURUSD = await oracleContract.methods.getNormalPrice().call();
+
+  const EURUSD = new BigNumber(bigIntEURUSD).dividedBy(10**18);
+
+  const price = await getInstantaneousPrice();
+
+  return price.dividedBy(EURUSD);
+}
 
 export const getToken0 = async () => {
   const exchange = new web3.eth.Contract(uniswapPairAbi, UNI.addr);

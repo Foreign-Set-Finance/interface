@@ -4,7 +4,8 @@ import {
   Box, LinkBase, Tag,
 } from '@aragon/ui';
 import EpochBlock from "../common/EpochBlock";
-import { EPOCH_START } from '../../configs'
+import { EPOCH_START, USDC, ESD } from '../../configs'
+import { getFXPrice } from '../../utils/infura';
 
 function epochformatted() {
   const epochStart = EPOCH_START;
@@ -86,12 +87,7 @@ function HomePage({user}: HomePageProps) {
         </div>
 
         <div style={{ flexBasis: '30%', marginLeft: '3%', marginRight: '2%' }}>
-          <MainButton
-            title="Price"
-            description="Network supply regulation statistics."
-            icon={<i className="fas fa-chart-area"/>}
-            onClick={() => {}}
-          />
+          <Price />
         </div>
       </div>
       <div style={{ padding: '1%', display: 'flex', flexWrap: 'wrap', alignItems: 'center' }}>
@@ -163,6 +159,41 @@ function MainButton({
       </Box>
     </LinkBase>
   );
+}
+
+function Price() {
+  const [price, setPrice] = useState('...');
+  const [scaling, setScaling] = useState('');
+
+  useEffect(() => {
+    async function updatePrice() {
+      const value = await getFXPrice();
+
+      setPrice(value.decimalPlaces(4).toString());
+
+      const scalingFactor = value.minus(1).dividedBy(12).plus(1).decimalPlaces(4);
+
+      setScaling(Math.max(scalingFactor.toNumber(), 1).toString());
+    }
+
+    updatePrice();
+  }, [])
+
+  return (
+    <a href={`https://app.uniswap.org/#/swap?inputCurrency=${USDC.addr}&outputCurrency=${ESD.addr}`} target="_blank" style={{ textDecoration: 'none' }}>
+      <Box>
+        <div style={{ paddingTop: 10, paddingBottom: 10, fontSize: 18 }}>
+          FSEUR-EUR
+        </div>
+        <span style={{ fontSize: 48 }}>
+          {price}
+        </span>
+        <div style={{ paddingTop: 5, opacity: 0.5 }}>
+          Buy FSEUR with USDC
+        </div>
+      </Box>
+    </a>
+  )
 }
 
 export default HomePage;
