@@ -4,6 +4,7 @@ import BigNumber from "bignumber.js";
 
 import {Box, Distribution} from '@aragon/ui';
 import {formatMoney, ownership} from "../../utils/number";
+import Currency  from '../common/Currency'
 
 type RegulationHeaderProps = {
   totalSupply: BigNumber,
@@ -42,7 +43,7 @@ const RegulationHeader = ({
         <div style={{ flexBasis: '25%', marginRight: '2%' }}>
           <Box heading="Supply Allocation">
             <Distribution
-              heading={`∅${formatMoney(totalSupply.toNumber())}`}
+              heading={`${formatMoney(totalSupply.toNumber())}`}
               items={[
                 { item: 'Earn', percentage: +(ownership(daoTotalSupply, totalSupply).toNumber().toFixed(2)) },
                 { item: 'Uniswap', percentage: +(ownership(poolTotalSupply, totalSupply).toNumber().toFixed(2)) },
@@ -54,7 +55,7 @@ const RegulationHeader = ({
         <div style={{ flexBasis: '25%', marginRight: '2%' }}>
           <Box heading="Earn Breakdown">
             <Distribution
-              heading={`∅${formatMoney(daoTotalSupply.toNumber())}`}
+              heading={`${formatMoney(daoTotalSupply.toNumber())}`}
               items={[
                 { item: 'Bonded', percentage: +(ownership(totalBonded, daoTotalSupply).toNumber().toFixed(2)) },
                 { item: 'Staged', percentage: +(ownership(totalStaged, daoTotalSupply).toNumber().toFixed(2)) },
@@ -66,7 +67,7 @@ const RegulationHeader = ({
         <div style={{ flexBasis: '25%' }}>
           <Box heading="Uniswap Breakdown">
             <Distribution
-              heading={`∅${formatMoney(poolTotalSupply.toNumber())}`}
+              heading={`${formatMoney(poolTotalSupply.toNumber())}`}
               items={[
                 { item: 'Liquidity', percentage: +(ownership(poolLiquidity, poolTotalSupply).toNumber().toFixed(2)) },
                 { item: 'Rewarded', percentage: +(ownership(poolRewarded, poolTotalSupply).toNumber().toFixed(2)) },

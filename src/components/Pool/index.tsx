@@ -166,12 +166,12 @@ function Pool({ user }: {user: string}) {
   }, [user]);
   // Check for error in .call()
   const isRewardedNegative = legacyUserRewardedBalance.isGreaterThan(new BigNumber("1000000000000000000"));
-  const hasLegacyBalance = legacyUserStagedBalance.isGreaterThan(0) || legacyUserClaimableBalance.isGreaterThan(0) || legacyUserBondedBalance.isGreaterThan(0);
+  // const hasLegacyBalance = legacyUserStagedBalance.isGreaterThan(0) || legacyUserClaimableBalance.isGreaterThan(0) || legacyUserBondedBalance.isGreaterThan(0);
   return (
     <>
       <IconHeader icon={<i className="fas fa-parachute-box"/>} text="LP Reward Pool"/>
 
-      {hasLegacyBalance ?
+      {false /* Disabled for now */ ?
         <>
           <Header primary={"Legacy Pool Migration"}/>
 

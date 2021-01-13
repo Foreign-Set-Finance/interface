@@ -10,6 +10,7 @@ import {
 import {ESD, ESDS, UNI} from "../../configs";
 import {formatBN, toTokenUnitsBN} from "../../utils/number";
 import {getPoolAddress} from "../../utils/pool";
+import Currency  from '../common/Currency'
 
 type TotalBalanceProps = {
   user: string,
@@ -83,11 +84,13 @@ function TotalBalance({ user }: TotalBalanceProps) {
   }, [user]);
 
   return (
-    <div style={{ fontSize: 14, padding: 3, fontWeight: 400, lineHeight: 1.5, fontFamily: 'aragon-ui-monospace, monospace'}}>
-      ∅{formatBN(totalBalance, 2)}
+    <div style={{ fontSize: 14, padding: 3, fontWeight: 400, lineHeight: 1.5, fontFamily: 'aragon-ui-monospace, monospace', display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
+      <Currency size={0.5} /> <span style={{ marginLeft: '5px' }}>{formatBN(totalBalance, 2)}</span>
     </div>
   );
 }
+
+// old icon - ∅
 
 
 export default TotalBalance;

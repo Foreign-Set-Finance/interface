@@ -4,13 +4,13 @@ import {
   Box, LinkBase, Tag,
 } from '@aragon/ui';
 import EpochBlock from "../common/EpochBlock";
-import { EPOCH_START, USDC, ESD } from '../../configs'
+import { EPOCH_START, EPOCH_PERIOD, USDC, ESD } from '../../configs'
 import { getFXPrice } from '../../utils/infura';
 
 function epochformatted() {
   const epochStart = EPOCH_START;
   //1609853797681
-  const epochPeriod = 8 * 60 * 60;
+  const epochPeriod = EPOCH_PERIOD;
   const hour = 60 * 60;
   const minute = 60;
   const unixTimeSec = Math.floor(Date.now() / 1000);
@@ -23,6 +23,12 @@ function epochformatted() {
   const epochMinute = Math.floor(epochRemainder / minute);
   epochRemainder -= epochMinute * minute;
   return `${epoch}-0${epochHour}:${epochMinute > 9 ? epochMinute : "0" + epochMinute.toString()}:${epochRemainder > 9 ? epochRemainder : "0" + epochRemainder.toString()}`;
+}
+
+function showEpoch() {
+  const now = +new Date();
+
+  return EPOCH_START * 1000 < now;
 }
 
 type HomePageProps = {
@@ -52,13 +58,15 @@ function HomePage({user}: HomePageProps) {
     };
   }, [user]);
 
+  const shouldShowEpoch = showEpoch();
+
   return (
     <>
       <div style={{ padding: '1%', display: 'flex', flexWrap: 'wrap', alignItems: 'center' }}>
         <div style={{ flexBasis: '68%' }} />
         <div style={{ flexBasis: '30%', flexGrow: 1, marginRight: '2%', textAlign: 'right'}}>
           <Box>
-            <EpochBlock epoch={epochTime}/>
+            {shouldShowEpoch && <EpochBlock epoch={epochTime}/>}
           </Box>
         </div>
       </div>
