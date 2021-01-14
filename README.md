@@ -39,4 +39,3 @@ limitations under the License.
 ```
 
 <br>
-made with 💔️ by the {ess}.
