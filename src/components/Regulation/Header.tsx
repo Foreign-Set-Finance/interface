@@ -4,7 +4,6 @@ import BigNumber from "bignumber.js";
 
 import {Box, Distribution} from '@aragon/ui';
 import {formatMoney, ownership} from "../../utils/number";
-import Currency  from '../common/Currency'
 
 type RegulationHeaderProps = {
   totalSupply: BigNumber,
