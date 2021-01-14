@@ -12,12 +12,11 @@ npm start
 
 ## contracts
 ### mainnet
-- `0x443D2f2755DB5942601fa062Cc248aAA153313D3` **DAO**
-- `0x7d72243247aedb0D1D35787A2942107dD76338d8` **Implementation**
-- `0x36F3FD68E7325a35EB768F1AedaAe9EA0689d723` **Døllar**
-- `0xea9f8bb8B5e8BA3D38628f0E18Ee82300eddBa0E` **Oracle**
-- `0x88ff79eB2Bc5850F27315415da8685282C7610F9` **UniswapV2 USDC:ESD Pair**
-- `0xdF0Ae5504A48ab9f913F8490fBef1b9333A68e68` **LP Incentivation Pool**
+- `0x000000dA8006f1Db5488089803Fa004C53451410` **Implementation**
+- `0x714441c4AFEDCfEbc9AED6eeE8A91820A4D21d66` **Døllar**
+- `0x0cA78d7BadA7670bE818F684a11C641ee1A86c64` **Oracle**
+- `0xf6699eee969FCE6eb939FcE3714fFb78d29DbEb1` **UniswapV2 USDC:ESD Pair**
+- `0xD52BCcEBb4581a26fa295dC715422Fc92441704e` **LP Incentivation Pool**
 
 ## disclaimer
 This is a clone of Foreign Set Finance and it is an attempt to produce algorithmic stable coins which are not pegged to the dollar but are instead pegged to other currencies.
@@ -37,5 +36,3 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
-
-<br>
