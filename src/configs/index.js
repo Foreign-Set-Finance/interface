@@ -1,2 +1,2 @@
-export * from './rinkeby';
+export * from './mainnet';
 

@@ -30,8 +30,8 @@ function Footer({updateTheme, theme, hasWeb3}: FooterProps) {
               <FooterLink icon={<i className="fab fa-github"/>} href={"https://github.com/foreign-set-finance"}/>
               <FooterLink icon={<i className="fab fa-twitter"/>} href={"https://twitter.com/foreignset"}/>
               <FooterLink icon={<i className="fab fa-medium"/>} href={"https://medium.com/@foreignsetfinance"}/>
-              <FooterLink icon={<i className="fab fa-telegram"/>} href={"https://t.me/foreignsetfinance"}/>
-              <FooterLink icon={<i className="fab fa-discord"/>} href={"https://discord.gg/2zw4ZjH4xS"}/>
+              <FooterLink icon={<i className="fab fa-telegram"/>} href={"https://t.me/fsfinance"}/>
+              <FooterLink icon={<i className="fab fa-discord"/>} href={"https://discord.gg/6XMQBdjs8D"}/>
             </div>
             <div style={{ width: '5%', textAlign: 'right', marginTop: '4px' }}>
               <ChangeModeButton hasWeb3={hasWeb3} theme={theme} updateTheme={updateTheme} />
