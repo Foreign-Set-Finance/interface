@@ -63,7 +63,7 @@ function UniswapPool({ user }: {user: string}) {
         <div style={{ flexBasis: '30%' }}>
           <MainButton
             title="Trade"
-            description="Trade døllar tokens."
+            description="Trade FSEUR tokens."
             icon={<i className="fas fa-exchange-alt"/>}
             href={`https://uniswap.exchange/swap?inputCurrency=${USDC.addr}&outputCurrency=${ESD.addr}`}
           />

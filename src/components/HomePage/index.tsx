@@ -113,7 +113,7 @@ function HomePage({user}: HomePageProps) {
         <div style={{ flexBasis: '30%' }}>
           <MainButton
             title="Trade"
-            description="Trade døllar tokens."
+            description="Trade FSEUR tokens."
             icon={<i className="fas fa-exchange-alt"/>}
             onClick={() => {
               history.push('/trade/');
